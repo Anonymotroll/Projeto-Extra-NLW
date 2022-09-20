@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+header {
+    padding-top: 32px;
+    height: calc(120px + 32px);
+}
+
+header div {
+    width: 120px;
+    margin: auto;
+    display: flex;
+    padding: 4px;
+
+    background-image: linear-gradient(90deg, #C91842 0%, #5CC2E2 100%);
+    border-radius: 50%;
+
+    transition: transform .3s;
+}
+
+header div img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+header div:hover {
+    transform: scale(1.1);
+}
+
+body * {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 160%
+}
+
+body {
+    background-image: url(./assets/Fundo.jpg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #121214;
+    background-position: top center;
+}
+
+main {
+    max-width: 580px;
+    width: 90%;
+    margin: 32px auto;
+
+    display: grid;
+    gap: 24px;
+}
+
+
+ul {
+    list-style: none;
+}
+
+section {
+    background-image: linear-gradient(90deg, #C91842 0%, #5CC2E2 100%);
+    padding-top: 4px;
+    border-radius: 10px;
+}
+
+section ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    margin-top: 24px;
+    transition: transform .3s;
+}
+
+section ul li:hover {
+    transform: scale(1.1);
+}
+
+section div {
+    background-color: #555555;
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 8px;
+}
+
+section h2 {
+    color: white;
+    letter-spacing: -0.40px;
+}
+
+section p {
+    color: #C1C1C1;
+    letter-spacing: -0.18px;
+}
+
+.films-list img {
+    width: 90px;
+    border-radius: 8px;
+}
+
+.series-list img {
+    width: 90px;
+    border-radius: 8px;
+}
+
+/* animações */
+
+header div {
+    animation: fromTop .7s .4s backwards;
+}
+
+main section {
+    animation: fromBottom .7s .4s backwards;
+}
+
+main section:nth-child(1) {
+    animation-delay: .3s;
+}
+
+main section:nth-child(2) {
+    animation-delay: .5s;
+}
+
+main section:nth-child(3) {
+    animation-delay: .8s;
+}
+
+@keyframes fromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
